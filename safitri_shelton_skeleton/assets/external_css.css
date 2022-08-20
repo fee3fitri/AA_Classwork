@@ -1,0 +1,64 @@
+* {
+    background-color: antiquewhite;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: 38px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+.ingredients-list {
+    list-style: square inside;
+}
+
+header > img {
+    width: 100px;
+}
+
+ul li a {
+    color: inherit;
+    text-decoration: none;
+}
+
+input[type="radio"], #expertise, input[type="submit"] {
+    cursor: pointer;
+    outline: none;
+}
+
+input[type="submit"] {
+    background-color: gold;
+}
+
+input[type="submit"]:hover {
+    background-color: #23211a ;
+}
+
+.ingredients-list li:nth-of-type(2n) {
+    background-color: lightgray;
+}
+
+.user_review + first-child {
+    border-top: 1px, solid, top;
+}
+
+input[type="radio"] {
+    background-image: url(./stars.png);
+    width: 30px;
+    height: 25px;
+    -webkit-appearance: none;
+}
+
+input[type="radio"]:hover {
+    background-position: 30px 60px;
+}
+
+input[type="radio"]:checked {
+    background-position: 30px 30px;
+}
