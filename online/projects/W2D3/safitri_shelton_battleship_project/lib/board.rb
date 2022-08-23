@@ -40,7 +40,7 @@ class Board
             col = rand(@grid[0].length)
             pos = @grid[row][col]
             if pos != :S 
-                @grid[row][col] = :S
+                pos = :S
                 ship_count += 1
             end
         end
