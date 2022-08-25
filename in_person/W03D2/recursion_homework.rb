@@ -1,5 +1,6 @@
-# Write a function sum_to(n) that uses recursion to calculate the sum from 1 to n (inclusive of n).
+require 'byebug'
 
+# Write a function sum_to(n) that uses recursion to calculate the sum from 1 to n (inclusive of n).
 def sum_to(n)
     if n == 1
         return 1
@@ -55,11 +56,26 @@ end
 # Write a function ice_cream_shop(flavors, favorite) that takes in an array of ice cream flavors available at the ice cream shop, 
 # as well as the user's favorite ice cream flavor. Recursively find out whether or not the shop offers their favorite flavor.
 def ice_cream_shop(flavors, favorite)
-    return false if flavors == []
+    # # return false if  == 0
+    # i = flavors.length - 1
 
-    (0...flavors.length).each do |i|
-        return ice_cream_shop(flavors[i], favorite)
-    end
+    # if i == 0
+    #     if flavors[i] != favorite
+    #         return false
+    #     else 
+    #         return true
+    #     end
+    # end
+
+   
+    # # debugger
+    # while i > 0
+    #     return true if flavors[i] == favorite
+    #     i -= 1
+    # end
+
+    # if arr.length == 1 check if flavors[0] == favorite => true/false
+    arr[1..-1].length
 end
 
 p ice_cream_shop(['vanilla', 'strawberry'], 'blue moon')  # => returns false
@@ -67,3 +83,18 @@ p ice_cream_shop(['pistachio', 'green tea', 'chocolate', 'mint chip'], 'green te
 p ice_cream_shop(['cookies n cream', 'blue moon', 'superman', 'honey lavender', 'sea salt caramel'], 'pistachio')  # => returns false
 p ice_cream_shop(['moose tracks'], 'moose tracks')  # => returns true
 p ice_cream_shop([], 'honey lavender')  # => returns false
+
+
+
+# Write a function reverse(string) that takes in a string and returns it reversed.
+def reverse(string)
+    return '' if string.length == 0
+    string[-1] + reverse(string[0...-1])
+end
+
+# p reverse("house") # => "esuoh"
+# p reverse("dog") # => "god"
+# p reverse("atom") # => "mota"
+# p reverse("q") # => "q"
+# p reverse("id") # => "di"
+# p reverse("") # => ""
